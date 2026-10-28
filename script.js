@@ -160,7 +160,7 @@ Existing research already shows that BC and textile fibres can be combined. My f
   },
   {
     id: "hci",
-    title: "HCI",
+    title: "HCI - Human Computer Interaction",
     projects: [
       {
         id: "dreamlogue",
