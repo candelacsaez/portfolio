@@ -17,10 +17,15 @@ const FOLDERS = [
         role: "Product Designer & Project Lead",
         context: "ESILV — Project Management Course",
         tools: ["CAD", "Prototyping", "Project Management", "User Research"],
-        description: `Designed, prototyped, and produced an innovative product as part of a Kickstarter-style project. Covered all stages from initial concept and user research to CAD modeling and physical production. The project followed a structured approach to bring a product idea from concept to reality, managing timelines, resources, and deliverables throughout.`,
-        images: [],
+        description: `Quickstarter was an accelerated, Kickstarter-inspired course project in which we had to take a product from idea to market-ready pitch in a very short time. Our team designed a recycled-plastic outlet cover (cache prise) that protects young children without looking like the usual childproofing hardware.
+        
+        We started with user research and ideation, then moved to conception, balancing child-safety constraints with a minimal design. We built and tested physical prototypes, iterating on fit and ease of use. In parallel, we developed the brand identity and a crowdfunding-style pitch, and managed the project as a team, with defined roles and milestones under a tight deadline.`,
+        images: [{ src: "images/kickstarter1.jpeg", alt: "The Glacier Pen Project — 3D printed bolt action pen" },
+          { src: "images/kickstarter2.jpeg", alt: "First steps in 3D modeling — Rhino interface with geometric forms" },
+          { src: "images/kickstarter3.jpeg", alt: "Laser cutting task — geometric paper forms and sketches" },
+          ],
       },
-      {
+     /* {
         id: "digital-fabrication",
         title: "Digital Fabrication",
         summary: "Hands-on exploration of 3D modeling, laser cutting, CNC machining, and rapid prototyping techniques.",
@@ -35,7 +40,7 @@ const FOLDERS = [
           { src: "images/fab-sketch.png", alt: "Sketching exercise — 3D visualization practice" },
           { src: "images/fab-reconstruct.png", alt: "Reconstructing a piece from an image — 3D modeling exercise" },
         ],
-      },
+      },*/
     ],
   },
   {
@@ -47,16 +52,20 @@ const FOLDERS = [
         title: "Upcycling Projects",
         summary: "Exploring the intersection of craft and sustainability through rewritten garments and original textile work.",
         role: "Designer & Maker",
-        context: "Maison Durable De Vinci — Sewing Association",
-        tools: ["Pattern Making", "Upcycling", "Slow Fashion", "Textiles", "Sewing"],
-        description: `Exploring the intersection of craft and sustainability, these upcycling projects range from rewritten garments to original textile work. As an active member of the sewing association Maison Durable De Vinci, the focus is on sustainable fashion and textile reuse. Each piece transforms existing materials into new, functional designs — from a leopard-print top and blue striped skirt to a gingham halter top and handcrafted bags. The work emphasizes reducing textile waste while creating aesthetically pleasing, wearable pieces.`,
+        context: "Personal Project",
+        tools: ["Upcycling", "Slow Fashion", "Textiles", "Sewing"],
+        description: `I’ve always been drawn to working with my hands, and learning to sew has turned that into a real passion: designing and making clothes from garments that already exist.
+
+Rather than starting from new fabric, I start from what’s already there. I take apart, rethink, and reassemble clothes into new pieces, which means every project begins with a question: what can this garment become? Working this way teaches me to read materials, understand how a garment is constructed, and solve problems with the constraints I have, from fabric quality to seams and proportions.
+
+For me, fashion and sustainability can’t be separated. Giving a second life to clothing is a practical way to reduce waste and rethink how we consume, and it pushes me to design with intention rather than excess.`,
         images: [
-          { src: "images/upcycling-leopard-top.png", alt: "Leopard print upcycled top held against a white background" },
-          { src: "images/upcycling-blue-skirt.png", alt: "Blue striped upcycled skirt with button details" },
-          { src: "images/upcycling-gingham-back.jpeg", alt: "Gingham halter top with tie-back detail, back view" },
-          { src: "images/upcycling-gingham-front.jpeg", alt: "Gingham halter top with asymmetric neckline, front view" },
-          { src: "images/upcycling-black-bag.jpeg", alt: "Black leather upcycled shoulder bag" },
-          { src: "images/upcycling-lace-bag.jpeg", alt: "Burgundy lace upcycled tote bag" },
+          { src: "images/upcycling1.jpeg", alt: "Leopard print upcycled top held against a white background" },
+          { src: "images/upcycling2.jpeg", alt: "Blue striped upcycled skirt with button details" },
+          { src: "images/upcycling3.jpeg", alt: "Gingham halter top with tie-back detail, back view" },
+          { src: "images/upcycling4.jpeg", alt: "Gingham halter top with asymmetric neckline, front view" },
+          { src: "images/upcycling5.jpeg", alt: "Black leather upcycled shoulder bag" },
+        
         ],
       },
     ],
@@ -67,13 +76,15 @@ const FOLDERS = [
     projects: [
       {
         id: "bacterial-cellulose",
-        title: "Bacterial Cellulose + Textile Waste",
-        summary: "Developing a biomaterial from bacterial cellulose and textile waste with a design-driven approach.",
+        title: "Bacterial Cellulose × Textile Waste",
+        summary: "A design-driven biomaterial for fashion (ongoing)",
         role: "Material Researcher & Designer",
         context: "ESILV — Biomaterials Research (Ongoing)",
         tools: ["Bacterial Cellulose", "Textile Waste", "Material Design", "Sustainability"],
-        description: `An ongoing research project creating a biomaterial from bacterial cellulose and textile waste. The approach is design-driven: the goal is to create a material that is aesthetically pleasing, with attention to touch and smell — not just functional. The vision is for this material to be used by people to make clothes, reducing textile waste, upcycling existing materials, and helping the fashion industry become more sustainable. The project sits at the intersection of material science, design, and sustainability.`,
-        images: [],
+        description: `I’m developing a fully biodegradable, sewable material made from bacterial cellulose (BC), grown from kombucha, combined with 100% cotton textile waste. The BC comes from Vivant, a kombucha producer in Paris, and the cotton scraps from the Institut Français de la Mode. Both are material that would otherwise be discarded.
+
+Existing research already shows that BC and textile fibres can be combined. My focus is the step that decides whether fashion can actually use the result: making the material pleasant in feel, smell and appearance, and testing its mechanical properties so it can become real garments. I’m working at the intersection of biomaterials and textile design, with the guidance of an expert in BC and kombucha-based clothing.`,
+        images: [ { src: "images/biomaterials1.jpeg",}],
       },
     ],
   },
@@ -86,20 +97,25 @@ const FOLDERS = [
         title: "Impractical Phone Number",
         summary: "A playful ML project exploring unconventional UI/UX interactions for phone number input.",
         role: "Creative Developer",
-        context: "Personal Project",
-        tools: ["Python", "Machine Learning", "Creative Code", "UI/UX Experiment"],
-        description: `A playful and unorthodox machine learning project exploring unconventional UI/UX interactions for phone number input using interactive machine learning models and creative code. The project challenges standard form design by introducing ML-driven interactions that make the mundane task of entering a phone number an engaging experience.`,
-        images: [],
+        context: "How to Make Almost Anything class",
+        tools: [ "Machine Learning", "Creative Code", "UI/UX Experiment"],
+        description: `We created a program in which the user had to introduce their phone number in an unpractical way, using machine learning and p5.js.
+         We used Teachable Machine to train a model with the recordings of each note. We trained the audio classifier with 11 classes: Background noise, do, do#, re, re#, mi, fa, fa#, sol, sol#, la. Then we went to editor.p5js.org and did the  mapping: do→0, do#→1, re→2, re#→3, mi→4, fa→5, fa#→6, sol→7, sol#→8, la→9.
+         
+         If you want to try it click here: https://editor.p5js.org/Mahel/sketches/rQJhqABpX`,
+        images: [{ src: "images/phone1.png",}],
       },
       {
         id: "handwritten-text-recognition",
         title: "Handwritten Text Recognition",
-        summary: "Computer vision model to recognize, process, and digitize handwritten text into structured format.",
+        summary: "Handwritten recognition to digital text",
         role: "ML Engineer",
         context: "Personal Project",
-        tools: ["Python", "TensorFlow", "Computer Vision", "OCR"],
-        description: `Computer vision model developed to recognize, process, and digitize handwritten text and custom scripts into structured text format. The project explores OCR (Optical Character Recognition) techniques and deep learning approaches to convert handwritten input into machine-readable text.`,
-        images: [],
+        tools: ["Handwriting recognition", "Computer Vision", "OCR"],
+        description: `I made a web site that transforms handwritten journal entries into digital text using deep learning OCR technology. Built with FastAPI and EasyOCR, the app features a custom canvas interface designed to mimic the aesthetic of a vintage journal. I deployed the application using Docker containerization on Hugging Face Spaces.
+        
+        Try it out here: https://candelacsaez-handwriting-recognition.hf.space/`,
+        images: [{ src: "images/hand1.png",}],
       },
     ],
   },
@@ -112,29 +128,39 @@ const FOLDERS = [
         title: "Graphic Design",
         summary: "Artistic direction and social media visuals for AMMA, my school's MMA and combat sports association.",
         role: "Respo Communication (Bureau Member)",
-        context: "AMMA — MMA & Combat Sports Association",
+        context: `AMMA — MMA & Combat Sports Association 
+        Personal Projects`,
         tools: ["Art Direction", "Social Media", "Instagram", "Graphic Design"],
-        description: `As respo communication on the bureau of AMMA, my school's MMA and combat sports association, I am in charge of the association's artistic direction. I design the Instagram posts, stories, and other visuals that shape how the association presents itself and communicates with its community.`,
-        images: [],
+        description: `As respo communication on the bureau of AMMA, my school's MMA and combat sports association, I am in charge of the association's artistic direction. I design the Instagram posts, stories, and other visuals that shape how the association presents itself and communicates with its community.
+        
+        @amma_devinvi
+        
+        I also have a deep interest in graphic design and make posters as a hobby.`,
+        images: [{ src: "images/ama1.png",},
+          { src: "images/ama2.jpeg",},
+           { src: "images/ama3.jpeg",}
+        ],
       },
       {
         id: "novalife",
-        title: "NovaLife",
-        summary: "A podcast community app designed to help refugees connect, share stories, and build community.",
+        title: "Order Management Web Site",
+        summary: "A web site built to manage the orders of the research institute IFT ",
         role: "UI/UX Designer & Developer",
-        context: "ESILV — App Design Course",
-        tools: ["Figma", "UI/UX", "Wireframing", "Prototyping", "User Research"],
-        description: `NovaLife is a podcast community app designed to help refugees reconnect, belong, and thrive. The app provides a platform where users can share their stories, listen to others, and build a supportive community. The design process started with user research and wireframes, moving through high-fidelity UI mockups in Figma. Key features include a podcast feed, chat functionality, community profiles, and a map to locate nearby community members. The app aims to help refugees rebuild their lives by fostering connection and shared experience.`,
+        context: "ESILV — Web Tech Course",
+        tools: ["Firebase", "Vue.js", "GitHub"],
+        description: `I developped an order management web site for a research institute using Firebase (Backend-as-a-Service) as a database to store orders, and to handle user login/authentication, and Vue for the frontend.
+        
+        Check it out: https://candelacsaez.github.io/lab-order-system/login`,
         images: [
-          { src: "images/novalife-logo.png", alt: "NovaLife app logo and branding — Reconnect. Belong. Thrive" },
-          { src: "images/novalife-screens.png", alt: "NovaLife app screens — podcast community, chat, map, and recording features" },
+          { src: "images/site1.png", alt: "NovaLife app logo and branding — Reconnect. Belong. Thrive" },
+          
         ],
       },
     ],
   },
   {
     id: "hci",
-    title: "HCI",
+    title: "HCI - Human Computer Interaction",
     projects: [
       {
         id: "dreamlogue",
@@ -142,9 +168,13 @@ const FOLDERS = [
         summary: "An interactive project blending prompt engineering, AI image generation, and custom display interfaces.",
         role: "Creative Technologist",
         context: "ESILV — HCI Course",
-        tools: ["Prompt Engineering", "AI Image Generation", "React", "Hardware Integration", "Pop-up UI"],
-        description: `DreamLogue is an interactive project blending prompt engineering, AI image generation, and custom display interfaces. Designed to turn personal journal entries and dreams into visual experiences through pop-up UI and hardware integration. The system takes written input — dreams, thoughts, journal entries — and transforms them into visual narratives using AI, creating a bridge between the written word and visual storytelling.`,
-        images: [],
+        tools: [ "Image Generation", "Human-Computer Interaction", "UI/UX"],
+        description: `DreamLogue is an interactive project aiming at enhancing users' introspection by creating an immersive experience where they can remember their dreams. It is a journal where you can keep track of your all your dreams and find patterns or repressed emotions.`,
+        images: [{ type: "video", src: "images/dreamlog1.mp4"},
+          { src: "images/dreamlog2.jpeg"},
+          { src: "images/dreamlog3.jpeg"},
+          { src: "images/dreamlog4.jpeg"}
+        ],
       },
       {
         id: "unity-haptics",
@@ -152,22 +182,30 @@ const FOLDERS = [
         summary: "A Unity environment with two contrasted worlds exploring how environmental design guides emotional experience.",
         role: "Environment Designer & Developer",
         context: "ESILV — HCI Course",
-        tools: ["Unity", "C#", "3D Modeling", "Environmental Design", "Audio Design"],
-        description: `A Unity environment with two contrasted worlds connected by a hidden portal. The first world is a hostile desert that creates an anxious ambiance and a feeling of being trapped. On the other side of the portal, there is a calm forest with a relaxed landscape that connects you to nature and a feeling of freedom. Each world has different music that matches the mood. The project explores how environmental design can be used to guide emotional experience, reflecting a personal appreciation for nature. The hidden portal rewards curiosity and exploration — crossing it symbolizes the effort of controlling your stress or emotions to get to a calmer place. Inspired by games like Journey and Firewatch, as well as research on stress recovery in natural environments.`,
+        tools: ["Unity", "Haptics", "Electronics"],
+        description: `A Unity environment with two contrasted worlds connected by a hidden portal. The first world is a hostile desert that creates an anxious ambiance and a feeling of being trapped. On the other side of the portal, there is a calm forest with a relaxed landscape that connects you to nature and a feeling of freedom. Each world has different music that matches the mood. The project explores how environmental design can be used to guide emotional experience, reflecting a personal appreciation for nature. 
+        
+        In the context of a class about haptics, I created a vibrating device that activates when you get close to this invisible portal.`,
         images: [
           { src: "images/hci-unity-forest.png", alt: "Unity forest environment — calm landscape with pine trees, water, and blue sky" },
           { src: "images/hci-unity-desert.png", alt: "Unity desert environment — harsh sand dunes with sandstorm and orange sky" },
+          { type: "video", src: "images/unity.mp4" }
         ],
+        
       },
       {
         id: "video-editing-electronics",
         title: "Video Editing with Electronics",
-        summary: "An interactive installation connecting electronic sensors to real-time video editing and playback.",
+        summary: "Electronics to real-time video editing and playback.",
         role: "Interactive Media Designer",
-        context: "ESILV — HCI Course",
-        tools: ["Electronics", "Arduino", "Video Processing", "Interactive Media", "Sensors"],
-        description: `An interactive installation connecting electronic sensors and custom physical controls to real-time video editing and playback manipulation. The project explores the intersection of physical computing and digital media, allowing users to manipulate video through tangible, electronic interfaces.`,
-        images: [],
+        context: "ESILV — How to Make Almost Anything Course",
+        tools: ["Electronics", "Video Processing", "Interactive Media"],
+        description: `In the context of the class HOW TO MAKE ALMOST ANYTHING, we created a PCB allowing us to glitch, edit, and play with videos and images. With potenciometers, we changed the colors of an image, we made our own pixeled animations and played with videos from an SD card.`,
+        images: [  { src: "images/elec1.jpg"},
+          { src: "images/elec2.jpg"},
+          { src: "images/elec3.jpg"},
+          { type: "video", src: "images/elec4.mp4"}
+        ],
       },
     ],
   },
@@ -205,8 +243,12 @@ function renderFolderList() {
 
   function renderBody(index) {
     const folder = FOLDERS[index];
-    const tags = folder.projects
-      .map(p => `<span class="folder-project-tag">${p.title}</span>`)
+    const projectLines = folder.projects
+      .map(p => `
+        <div class="folder-project-line">
+          <span class="folder-project-line-title">${p.title}</span>
+          <span class="folder-project-line-desc">${p.summary}</span>
+        </div>`)
       .join("");
 
     panel.setAttribute("aria-labelledby", `folder-tab-${folder.id}`);
@@ -215,7 +257,7 @@ function renderFolderList() {
         <div class="folder-top-row">
           <span class="folder-title">${folder.title}</span>
         </div>
-        <div class="folder-projects">${tags}</div>
+        <div class="folder-projects-list">${projectLines}</div>
         <a href="project.html?folder=${folder.id}" class="folder-open" aria-label="Open ${folder.title} folder">
           Open folder
           <svg class="folder-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -257,6 +299,22 @@ function renderFolderList() {
 }
 
 
+// ── Media Helpers ──────────────────────────────
+
+function isVideoMedia(item) {
+  if (!item) return false;
+  return item.type === "video" || (typeof item.src === "string" && /\.(mp4|webm|ogg|mov)$/i.test(item.src));
+}
+
+function renderMainMedia(item) {
+  if (!item) return "";
+  if (isVideoMedia(item)) {
+    return `<video src="${item.src}" controls autoplay muted loop playsinline class="gallery-media gallery-video" id="gallery-main-media"></video>`;
+  }
+  return `<img src="${item.src}" alt="${item.alt || ''}" class="gallery-media gallery-img" id="gallery-main-media" />`;
+}
+
+
 // ── Project Page: Render Project ──────────────
 
 function renderProjectPage() {
@@ -272,7 +330,7 @@ function renderProjectPage() {
   if (!folder) {
     root.innerHTML = `
       <div class="project-header">
-        <a href="index.html" class="project-back">
+        <a href="index.html#work" class="project-back">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 12H5M12 5l-7 7 7 7" />
           </svg>
@@ -280,7 +338,7 @@ function renderProjectPage() {
         </a>
       </div>
       <div class="project-content">
-        <p style="color: var(--text-muted);">Folder not found. <a href="index.html" style="color: var(--accent);">Return to portfolio</a></p>
+        <p style="color: var(--text-muted);">Folder not found. <a href="index.html#work" style="color: var(--accent);">Return to portfolio</a></p>
       </div>
     `;
     return;
@@ -291,35 +349,62 @@ function renderProjectPage() {
   const activeIndex = Math.max(0, Math.min(subIndex, folder.projects.length - 1));
   const project = folder.projects[activeIndex];
 
-  // Sub-project navigation
-  const navHtml = folder.projects.length > 1
-    ? `<nav class="project-nav" aria-label="Project navigation">
-        ${folder.projects.map((p, i) => `
-          <button class="project-nav-btn ${i === activeIndex ? "active" : ""}" data-index="${i}" aria-pressed="${i === activeIndex}">
-            ${p.title}
-          </button>
-        `).join("")}
-      </nav>`
-    : "";
+  const adaptFolders = ["machine-learning", "digital-design", "hci"];
+  const shouldAdaptFrame = adaptFolders.includes(folder.id);
+  const adaptClass = shouldAdaptFrame ? "gallery-main--adapt" : "";
 
-  // Image gallery
+  const projectsNavHtml = folder.projects.length > 1
+    ? `<div class="project-nav-bar">
+        <nav class="project-nav" aria-label="Projects in this folder">
+          ${folder.projects.map((p, i) => `
+            <button class="project-nav-btn ${i === activeIndex ? "active" : ""}" data-index="${i}" aria-pressed="${i === activeIndex}">
+              <span class="project-nav-num">0${i + 1}</span>
+              <span class="project-nav-name">${p.title}</span>
+            </button>
+          `).join("")}
+        </nav>
+      </div>`
+    : `<div class="project-nav-bar">
+        <nav class="project-nav" aria-label="Project in this folder">
+          <button class="project-nav-btn active" data-index="0" aria-pressed="true">
+            <span class="project-nav-num">01</span>
+            <span class="project-nav-name">${project.title}</span>
+          </button>
+        </nav>
+      </div>`;
+
+  // Image/Video gallery
   const galleryHtml = project.images.length > 0
     ? `<div class="project-gallery">
-        <div class="gallery-main">
-          <img src="${project.images[0].src}" alt="${project.images[0].alt}" id="gallery-main-img" />
+        <div class="gallery-main ${adaptClass}">
+          ${renderMainMedia(project.images[0])}
         </div>
         ${project.images.length > 1 ? `
-          <div class="gallery-thumbs" role="tablist" aria-label="Image gallery">
-            ${project.images.map((img, i) => `
-              <button class="gallery-thumb ${i === 0 ? "active" : ""}" data-index="${i}" role="tab" aria-selected="${i === 0}" aria-label="View image ${i + 1}: ${img.alt}">
-                <img src="${img.src}" alt="" />
-              </button>
-            `).join("")}
+          <div class="gallery-thumbs" role="tablist" aria-label="Media gallery">
+            ${project.images.map((img, i) => {
+              const isVid = isVideoMedia(img);
+              return `
+                <button class="gallery-thumb ${i === 0 ? "active" : ""}" data-index="${i}" role="tab" aria-selected="${i === 0}" aria-label="View media ${i + 1}: ${img.alt || ''}">
+                  ${isVid ? `
+                    <div class="thumb-video-container">
+                      <video src="${img.src}#t=0.001" muted playsinline preload="metadata"></video>
+                      <span class="thumb-video-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                          <polygon points="6 4 20 12 6 20"></polygon>
+                        </svg>
+                      </span>
+                    </div>
+                  ` : `
+                    <img src="${img.src}" alt="${img.alt || ''}" />
+                  `}
+                </button>
+              `;
+            }).join("")}
           </div>
         ` : ""}
       </div>`
     : `<div class="project-gallery">
-        <div class="gallery-main">
+        <div class="gallery-main ${adaptClass}">
           <div class="gallery-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
@@ -332,23 +417,22 @@ function renderProjectPage() {
       </div>`;
 
   // Project info
+  const descParagraphs = project.description
+    .split(/\n\s*\n/)
+    .map(para => `<p class="project-description">${para.trim()}</p>`)
+    .join("");
+
   const infoHtml = `
     <div class="project-info">
       <h2>${project.title}</h2>
-      <p class="project-summary">${project.summary}</p>
-      <p class="project-description">${project.description}</p>
+      ${project.summary ? `<p class="project-summary">${project.summary}</p>` : ""}
+      <div class="project-descriptions">
+        ${descParagraphs}
+      </div>
       <div class="project-details">
-        <div class="project-detail-row">
-          <span class="project-detail-label">Role</span>
-          <span class="project-detail-value">${project.role}</span>
-        </div>
         <div class="project-detail-row">
           <span class="project-detail-label">Context</span>
           <span class="project-detail-value">${project.context}</span>
-        </div>
-        <div class="project-detail-row">
-          <span class="project-detail-label">Tools</span>
-          <span class="project-detail-value">${project.tools.join(", ")}</span>
         </div>
       </div>
       <div class="project-tags">
@@ -358,7 +442,7 @@ function renderProjectPage() {
   `;
 
   root.innerHTML = `
-    <a href="index.html" class="project-back">
+    <a href="index.html#work" class="project-back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 5l-7 7 7 7" />
       </svg>
@@ -369,12 +453,8 @@ function renderProjectPage() {
       <div class="project-folder-tab">
         <h1>${folder.title}</h1>
       </div>
-      <div class="project-meta">
-        <span class="project-meta-item"><strong>${folder.projects.length}</strong> project${folder.projects.length !== 1 ? "s" : ""}</span>
-      </div>
+      ${projectsNavHtml}
     </header>
-
-    ${navHtml}
 
     <div class="project-content">
       ${galleryHtml}
@@ -383,14 +463,18 @@ function renderProjectPage() {
   `;
 
   // Attach gallery thumbnail handlers
-  const mainImg = document.getElementById("gallery-main-img");
+  const mainGalleryContainer = root.querySelector(".gallery-main");
   const thumbs = root.querySelectorAll(".gallery-thumb");
   thumbs.forEach(thumb => {
     thumb.addEventListener("click", () => {
       const idx = parseInt(thumb.dataset.index, 10);
-      if (project.images[idx] && mainImg) {
-        mainImg.src = project.images[idx].src;
-        mainImg.alt = project.images[idx].alt;
+      const mediaItem = project.images[idx];
+      if (mediaItem && mainGalleryContainer) {
+        mainGalleryContainer.innerHTML = renderMainMedia(mediaItem);
+        const vid = mainGalleryContainer.querySelector("video");
+        if (vid) {
+          vid.play().catch(() => {});
+        }
       }
       thumbs.forEach(t => {
         t.classList.remove("active");
@@ -400,6 +484,12 @@ function renderProjectPage() {
       thumb.setAttribute("aria-selected", "true");
     });
   });
+
+  // Autoplay initial video if present
+  const initialVid = root.querySelector(".gallery-main video");
+  if (initialVid) {
+    initialVid.play().catch(() => {});
+  }
 
   // Attach sub-project navigation handlers
   const navBtns = root.querySelectorAll(".project-nav-btn");
@@ -422,4 +512,10 @@ function renderProjectPage() {
 document.addEventListener("DOMContentLoaded", () => {
   renderFolderList();
   renderProjectPage();
+});
+
+window.addEventListener("popstate", () => {
+  if (document.getElementById("project-root")) {
+    renderProjectPage();
+  }
 });

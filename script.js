@@ -189,7 +189,7 @@ Existing research already shows that BC and textile fibres can be combined. My f
         images: [
           { src: "images/hci-unity-forest.png", alt: "Unity forest environment — calm landscape with pine trees, water, and blue sky" },
           { src: "images/hci-unity-desert.png", alt: "Unity desert environment — harsh sand dunes with sandstorm and orange sky" },
-          { src: "images/unity.mp4"}
+          { type: "video", src: "images/unity.mp4" }
         ],
         
       },
@@ -204,7 +204,7 @@ Existing research already shows that BC and textile fibres can be combined. My f
         images: [  { src: "images/elec1.jpg"},
           { src: "images/elec2.jpg"},
           { src: "images/elec3.jpg"},
-          { src: "images/elec4.mp4"}
+          { type: "video", src: "images/elec4.mp4"}
         ],
       },
     ],
@@ -299,6 +299,22 @@ function renderFolderList() {
 }
 
 
+// ── Media Helpers ──────────────────────────────
+
+function isVideoMedia(item) {
+  if (!item) return false;
+  return item.type === "video" || (typeof item.src === "string" && /\.(mp4|webm|ogg|mov)$/i.test(item.src));
+}
+
+function renderMainMedia(item) {
+  if (!item) return "";
+  if (isVideoMedia(item)) {
+    return `<video src="${item.src}" controls autoplay muted loop playsinline class="gallery-media gallery-video" id="gallery-main-media"></video>`;
+  }
+  return `<img src="${item.src}" alt="${item.alt || ''}" class="gallery-media gallery-img" id="gallery-main-media" />`;
+}
+
+
 // ── Project Page: Render Project ──────────────
 
 function renderProjectPage() {
@@ -314,7 +330,7 @@ function renderProjectPage() {
   if (!folder) {
     root.innerHTML = `
       <div class="project-header">
-        <a href="index.html" class="project-back">
+        <a href="index.html#work" class="project-back">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 12H5M12 5l-7 7 7 7" />
           </svg>
@@ -322,7 +338,7 @@ function renderProjectPage() {
         </a>
       </div>
       <div class="project-content">
-        <p style="color: var(--text-muted);">Folder not found. <a href="index.html" style="color: var(--accent);">Return to portfolio</a></p>
+        <p style="color: var(--text-muted);">Folder not found. <a href="index.html#work" style="color: var(--accent);">Return to portfolio</a></p>
       </div>
     `;
     return;
@@ -333,42 +349,17 @@ function renderProjectPage() {
   const activeIndex = Math.max(0, Math.min(subIndex, folder.projects.length - 1));
   const project = folder.projects[activeIndex];
 
-  // Projects navigation & highlighting inside the folder
-  /*const projectsNavHtml = folder.projects.length > 1
-    ? `<div class="project-nav-bar">
-        <div class="project-nav-header">
-          <span class="project-nav-label">Projects in this folder</span>
-          <span class="project-nav-count">${activeIndex + 1} / ${folder.projects.length}</span>
-        </div>
-        <nav class="project-nav" aria-label="Projects in this folder">
-          ${folder.projects.map((p, i) => `
-            <button class="project-nav-btn ${i === activeIndex ? "active" : ""}" data-index="${i}" aria-pressed="${i === activeIndex}">
-              <span class="project-nav-num">0${i + 1}</span>
-              <span class="project-nav-name">${p.title}</span>
-              ${i === activeIndex ? `<span class="project-nav-tag">Active</span>` : ""}
-            </button>
-          `).join("")}
-        </nav>
-      </div>`
-    : `<div class="project-nav-bar">
-        <div class="project-nav-header">
-          <span class="project-nav-label">Project in this folder</span>
-        </div>
-        <div class="project-nav-single">
-          <span class="project-nav-num">01</span>
-          <span class="project-nav-name">${project.title}</span>
-        </div>
-      </div>`; */
+  const adaptFolders = ["machine-learning", "digital-design", "hci"];
+  const shouldAdaptFrame = adaptFolders.includes(folder.id);
+  const adaptClass = shouldAdaptFrame ? "gallery-main--adapt" : "";
 
-    const projectsNavHtml = folder.projects.length > 1
+  const projectsNavHtml = folder.projects.length > 1
     ? `<div class="project-nav-bar">
-      
         <nav class="project-nav" aria-label="Projects in this folder">
           ${folder.projects.map((p, i) => `
             <button class="project-nav-btn ${i === activeIndex ? "active" : ""}" data-index="${i}" aria-pressed="${i === activeIndex}">
               <span class="project-nav-num">0${i + 1}</span>
               <span class="project-nav-name">${p.title}</span>
-              ${i === activeIndex ? `<span class="project-nav-tag">Active</span>` : ""}
             </button>
           `).join("")}
         </nav>
@@ -382,24 +373,38 @@ function renderProjectPage() {
         </nav>
       </div>`;
 
-  // Image gallery
+  // Image/Video gallery
   const galleryHtml = project.images.length > 0
     ? `<div class="project-gallery">
-        <div class="gallery-main">
-          <img src="${project.images[0].src}" alt="${project.images[0].alt}" id="gallery-main-img" />
+        <div class="gallery-main ${adaptClass}">
+          ${renderMainMedia(project.images[0])}
         </div>
         ${project.images.length > 1 ? `
-          <div class="gallery-thumbs" role="tablist" aria-label="Image gallery">
-            ${project.images.map((img, i) => `
-              <button class="gallery-thumb ${i === 0 ? "active" : ""}" data-index="${i}" role="tab" aria-selected="${i === 0}" aria-label="View image ${i + 1}: ${img.alt}">
-                <img src="${img.src}" alt="" />
-              </button>
-            `).join("")}
+          <div class="gallery-thumbs" role="tablist" aria-label="Media gallery">
+            ${project.images.map((img, i) => {
+              const isVid = isVideoMedia(img);
+              return `
+                <button class="gallery-thumb ${i === 0 ? "active" : ""}" data-index="${i}" role="tab" aria-selected="${i === 0}" aria-label="View media ${i + 1}: ${img.alt || ''}">
+                  ${isVid ? `
+                    <div class="thumb-video-container">
+                      <video src="${img.src}#t=0.001" muted playsinline preload="metadata"></video>
+                      <span class="thumb-video-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                          <polygon points="6 4 20 12 6 20"></polygon>
+                        </svg>
+                      </span>
+                    </div>
+                  ` : `
+                    <img src="${img.src}" alt="${img.alt || ''}" />
+                  `}
+                </button>
+              `;
+            }).join("")}
           </div>
         ` : ""}
       </div>`
     : `<div class="project-gallery">
-        <div class="gallery-main">
+        <div class="gallery-main ${adaptClass}">
           <div class="gallery-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
@@ -437,7 +442,7 @@ function renderProjectPage() {
   `;
 
   root.innerHTML = `
-    <a href="index.html" class="project-back">
+    <a href="index.html#work" class="project-back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 5l-7 7 7 7" />
       </svg>
@@ -446,7 +451,6 @@ function renderProjectPage() {
 
     <header class="project-header">
       <div class="project-folder-tab">
-        <span class="project-folder-badge">Folder</span>
         <h1>${folder.title}</h1>
       </div>
       ${projectsNavHtml}
@@ -459,14 +463,18 @@ function renderProjectPage() {
   `;
 
   // Attach gallery thumbnail handlers
-  const mainImg = document.getElementById("gallery-main-img");
+  const mainGalleryContainer = root.querySelector(".gallery-main");
   const thumbs = root.querySelectorAll(".gallery-thumb");
   thumbs.forEach(thumb => {
     thumb.addEventListener("click", () => {
       const idx = parseInt(thumb.dataset.index, 10);
-      if (project.images[idx] && mainImg) {
-        mainImg.src = project.images[idx].src;
-        mainImg.alt = project.images[idx].alt;
+      const mediaItem = project.images[idx];
+      if (mediaItem && mainGalleryContainer) {
+        mainGalleryContainer.innerHTML = renderMainMedia(mediaItem);
+        const vid = mainGalleryContainer.querySelector("video");
+        if (vid) {
+          vid.play().catch(() => {});
+        }
       }
       thumbs.forEach(t => {
         t.classList.remove("active");
@@ -476,6 +484,12 @@ function renderProjectPage() {
       thumb.setAttribute("aria-selected", "true");
     });
   });
+
+  // Autoplay initial video if present
+  const initialVid = root.querySelector(".gallery-main video");
+  if (initialVid) {
+    initialVid.play().catch(() => {});
+  }
 
   // Attach sub-project navigation handlers
   const navBtns = root.querySelectorAll(".project-nav-btn");
