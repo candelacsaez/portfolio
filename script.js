@@ -7,40 +7,21 @@
 
 const FOLDERS = [
   {
-    id: "product-design",
-    title: "Product Design",
+    id: "biomaterials",
+    title: "Biomaterials",
     projects: [
       {
-        id: "quickstarter",
-        title: "Quickstarter",
-        summary: "Designed, prototyped, and produced an innovative product as part of a Kickstarter-style project.",
-        role: "Product Designer & Project Lead",
-        context: "ESILV — Project Management Course",
-        tools: ["CAD", "Prototyping", "Project Management", "User Research"],
-        description: `Quickstarter was an accelerated, Kickstarter-inspired course project in which we had to take a product from idea to market-ready pitch in a very short time. Our team designed a recycled-plastic outlet cover (cache prise) that protects young children without looking like the usual childproofing hardware.
-        
-        We started with user research and ideation, then moved to conception, balancing child-safety constraints with a minimal design. We built and tested physical prototypes, iterating on fit and ease of use. In parallel, we developed the brand identity and a crowdfunding-style pitch, and managed the project as a team, with defined roles and milestones under a tight deadline.`,
-        images: [{ src: "images/kickstarter1.jpeg", alt: "The Glacier Pen Project — 3D printed bolt action pen" },
-          { src: "images/kickstarter2.jpeg", alt: "First steps in 3D modeling — Rhino interface with geometric forms" },
-          { src: "images/kickstarter3.jpeg", alt: "Laser cutting task — geometric paper forms and sketches" },
-          ],
+        id: "bacterial-cellulose",
+        title: "Bacterial Cellulose × Textile Waste",
+        summary: "A <strong class=\"highlight-green\">design-driven biomaterial</strong> for <strong class=\"highlight-green\">fashion</strong> (ongoing)",
+        role: "Material Researcher & Designer",
+        context: "ESILV — Biomaterials Research (Ongoing)",
+        tools: ["Bacterial Cellulose", "Textile Waste", "Material Design", "Sustainability"],
+        description: `I’m developing a <strong class=\"highlight-green\">fully biodegradable, sewable material</strong> made from <strong class=\"highlight-green\">bacterial cellulose (BC)</strong>, grown from kombucha, combined with <strong class=\"highlight-green\">100% cotton textile waste</strong>. The BC comes from Vivant, a kombucha producer in Paris, and the cotton scraps from the Institut Français de la Mode. Both are material that would otherwise be discarded.
+
+Existing research already shows that BC and textile fibres can be combined. My focus is the step that decides whether fashion can actually use the result: making the material <strong class=\"highlight-green\">pleasant in feel, smell and appearance</strong>, and <strong class=\"highlight-green\">testing its mechanical properties</strong> so it can become real garments. I’m working at the intersection of <strong class=\"highlight-green\">biomaterials and textile design</strong>, with the guidance of an expert in BC and kombucha-based clothing.`,
+        images: [ { src: "images/biomaterials1.jpeg",}],
       },
-     /* {
-        id: "digital-fabrication",
-        title: "Digital Fabrication",
-        summary: "Hands-on exploration of 3D modeling, laser cutting, CNC machining, and rapid prototyping techniques.",
-        role: "Designer & Fabricator",
-        context: "ESILV — How to Make (Almost) Anything Course",
-        tools: ["Rhino", "Fusion 360", "3D Printing", "Laser Cutting", "Cricut", "Onshape"],
-        description: `Hands-on exploration in 3D modeling, laser cutting, CNC machining, and rapid prototyping techniques to craft functional physical components and design prototypes. The course covered the digital fabrication workflow from 3D modeling to physical making, using tools like Rhino, Fusion 360, and Cricut. Projects included designing and 3D printing a bolt action pen, creating geometric forms with laser cutting, and learning to visualize and manipulate 3D space digitally.`,
-        images: [
-          { src: "images/fab-pen-project.png", alt: "The Glacier Pen Project — 3D printed bolt action pen" },
-          { src: "images/fab-3d-modeling.png", alt: "First steps in 3D modeling — Rhino interface with geometric forms" },
-          { src: "images/fab-laser-cut.png", alt: "Laser cutting task — geometric paper forms and sketches" },
-          { src: "images/fab-sketch.png", alt: "Sketching exercise — 3D visualization practice" },
-          { src: "images/fab-reconstruct.png", alt: "Reconstructing a piece from an image — 3D modeling exercise" },
-        ],
-      },*/
     ],
   },
   {
@@ -50,41 +31,43 @@ const FOLDERS = [
       {
         id: "upcycling-projects",
         title: "Upcycling Projects",
-        summary: "Exploring the intersection of craft and sustainability through rewritten garments and original textile work.",
+        summary: "Exploring the intersection of <strong class=\"highlight-green\">craft and sustainability</strong> through <strong class=\"highlight-green\">rewritten garments</strong> and <strong class=\"highlight-green\">original textile work</strong>.",
         role: "Designer & Maker",
         context: "Personal Project",
         tools: ["Upcycling", "Slow Fashion", "Textiles", "Sewing"],
-        description: `I’ve always been drawn to working with my hands, and learning to sew has turned that into a real passion: designing and making clothes from garments that already exist.
+        description: `I’ve always been drawn to working with my hands, and learning to sew has turned that into a real passion: <strong class=\"highlight-green\">designing and making clothes</strong> from garments that already exist.
 
-Rather than starting from new fabric, I start from what’s already there. I take apart, rethink, and reassemble clothes into new pieces, which means every project begins with a question: what can this garment become? Working this way teaches me to read materials, understand how a garment is constructed, and solve problems with the constraints I have, from fabric quality to seams and proportions.
+Rather than starting from new fabric, I start from what’s already there. I <strong class=\"highlight-green\">take apart, rethink, and reassemble</strong> clothes into new pieces, which means every project begins with a question: what can this garment become? Working this way teaches me to <strong class=\"highlight-green\">read materials</strong>, understand how a garment is constructed, and solve problems with the constraints I have, from fabric quality to seams and proportions.
 
-For me, fashion and sustainability can’t be separated. Giving a second life to clothing is a practical way to reduce waste and rethink how we consume, and it pushes me to design with intention rather than excess.`,
+For me, <strong class=\"highlight-green\">fashion and sustainability</strong> can’t be separated. Giving a <strong class=\"highlight-green\">second life to clothing</strong> is a practical way to <strong class=\"highlight-green\">reduce waste</strong> and rethink how we consume, and it pushes me to design with intention rather than excess.`,
         images: [
           { src: "images/upcycling1.jpeg", alt: "Leopard print upcycled top held against a white background" },
           { src: "images/upcycling2.jpeg", alt: "Blue striped upcycled skirt with button details" },
           { src: "images/upcycling3.jpeg", alt: "Gingham halter top with tie-back detail, back view" },
           { src: "images/upcycling4.jpeg", alt: "Gingham halter top with asymmetric neckline, front view" },
           { src: "images/upcycling5.jpeg", alt: "Black leather upcycled shoulder bag" },
-        
         ],
       },
     ],
   },
   {
-    id: "biomaterials",
-    title: "Biomaterials",
+    id: "product-design",
+    title: "Product Design",
     projects: [
       {
-        id: "bacterial-cellulose",
-        title: "Bacterial Cellulose × Textile Waste",
-        summary: "A design-driven biomaterial for fashion (ongoing)",
-        role: "Material Researcher & Designer",
-        context: "ESILV — Biomaterials Research (Ongoing)",
-        tools: ["Bacterial Cellulose", "Textile Waste", "Material Design", "Sustainability"],
-        description: `I’m developing a fully biodegradable, sewable material made from bacterial cellulose (BC), grown from kombucha, combined with 100% cotton textile waste. The BC comes from Vivant, a kombucha producer in Paris, and the cotton scraps from the Institut Français de la Mode. Both are material that would otherwise be discarded.
-
-Existing research already shows that BC and textile fibres can be combined. My focus is the step that decides whether fashion can actually use the result: making the material pleasant in feel, smell and appearance, and testing its mechanical properties so it can become real garments. I’m working at the intersection of biomaterials and textile design, with the guidance of an expert in BC and kombucha-based clothing.`,
-        images: [ { src: "images/biomaterials1.jpeg",}],
+        id: "quickstarter",
+        title: "Quickstarter",
+        summary: "<strong class=\"highlight-green\">Designed, prototyped, and produced</strong> an innovative product as part of a <strong class=\"highlight-green\">Kickstarter-style project</strong>.",
+        role: "Product Designer & Project Lead",
+        context: "ESILV — Project Management Course",
+        tools: ["CAD", "Prototyping", "Project Management", "User Research"],
+        description: `Quickstarter was an accelerated, Kickstarter-inspired course project in which we had to take a product from <strong class=\"highlight-green\">idea to market-ready pitch</strong> in a very short time. Our team designed a <strong class=\"highlight-green\">recycled-plastic outlet cover</strong> (cache prise) that protects young children without looking like the usual childproofing hardware.
+        
+We started with <strong class=\"highlight-green\">user research and ideation</strong>, then moved to conception, balancing child-safety constraints with a <strong class=\"highlight-green\">minimal design</strong>. We built and tested <strong class=\"highlight-green\">physical prototypes</strong>, iterating on fit and ease of use. In parallel, we developed the <strong class=\"highlight-green\">brand identity</strong> and a crowdfunding-style pitch, and managed the project as a team, with defined roles and milestones under a tight deadline.`,
+        images: [{ src: "images/kickstarter1.jpeg", alt: "The Glacier Pen Project — 3D printed bolt action pen" },
+          { src: "images/kickstarter2.jpeg", alt: "First steps in 3D modeling — Rhino interface with geometric forms" },
+          { src: "images/kickstarter3.jpeg", alt: "Laser cutting task — geometric paper forms and sketches" },
+          ],
       },
     ],
   },
@@ -95,26 +78,27 @@ Existing research already shows that BC and textile fibres can be combined. My f
       {
         id: "impractical-phone-number",
         title: "Impractical Phone Number",
-        summary: "A playful ML project exploring unconventional UI/UX interactions for phone number input.",
+        summary: "A playful <strong class=\"highlight-green\">ML project</strong> exploring <strong class=\"highlight-green\">unconventional UI/UX interactions</strong> for phone number input.",
         role: "Creative Developer",
         context: "How to Make Almost Anything class",
         tools: [ "Machine Learning", "Creative Code", "UI/UX Experiment"],
-        description: `We created a program in which the user had to introduce their phone number in an unpractical way, using machine learning and p5.js.
-         We used Teachable Machine to train a model with the recordings of each note. We trained the audio classifier with 11 classes: Background noise, do, do#, re, re#, mi, fa, fa#, sol, sol#, la. Then we went to editor.p5js.org and did the  mapping: do→0, do#→1, re→2, re#→3, mi→4, fa→5, fa#→6, sol→7, sol#→8, la→9.
+        description: `We created a program in which the user had to introduce their phone number in an unpractical way, using <strong class=\"highlight-green\">machine learning and p5.js</strong>.
+        
+We used <strong class=\"highlight-green\">Teachable Machine</strong> to train a model with the recordings of each note. We trained the <strong class=\"highlight-green\">audio classifier</strong> with 11 classes: Background noise, do, do#, re, re#, mi, fa, fa#, sol, sol#, la. Then we went to editor.p5js.org and did the mapping: do→0, do#→1, re→2, re#→3, mi→4, fa→5, fa#→6, sol→7, sol#→8, la→9.
          
-         If you want to try it click here: https://editor.p5js.org/Mahel/sketches/rQJhqABpX`,
+If you want to try it click here: <a href="https://editor.p5js.org/Mahel/sketches/rQJhqABpX" target="_blank" rel="noopener noreferrer">https://editor.p5js.org/Mahel/sketches/rQJhqABpX</a>`,
         images: [{ src: "images/phone1.png",}],
       },
       {
         id: "handwritten-text-recognition",
         title: "Handwritten Text Recognition",
-        summary: "Handwritten recognition to digital text",
+        summary: "<strong class=\"highlight-green\">Handwritten recognition</strong> to <strong class=\"highlight-green\">digital text</strong> using deep learning OCR.",
         role: "ML Engineer",
         context: "Personal Project",
         tools: ["Handwriting recognition", "Computer Vision", "OCR"],
-        description: `I made a web site that transforms handwritten journal entries into digital text using deep learning OCR technology. Built with FastAPI and EasyOCR, the app features a custom canvas interface designed to mimic the aesthetic of a vintage journal. I deployed the application using Docker containerization on Hugging Face Spaces.
+        description: `I made a web site that transforms <strong class=\"highlight-green\">handwritten journal entries into digital text</strong> using <strong class=\"highlight-green\">deep learning OCR technology</strong>. Built with <strong class=\"highlight-green\">FastAPI and EasyOCR</strong>, the app features a custom canvas interface designed to mimic the aesthetic of a vintage journal. I deployed the application using <strong class=\"highlight-green\">Docker containerization</strong> on <strong class=\"highlight-green\">Hugging Face Spaces</strong>.
         
-        Try it out here: https://candelacsaez-handwriting-recognition.hf.space/`,
+Try it out here: <a href="https://candelacsaez-handwriting-recognition.hf.space/" target="_blank" rel="noopener noreferrer">https://candelacsaez-handwriting-recognition.hf.space/</a>`,
         images: [{ src: "images/hand1.png",}],
       },
     ],
@@ -126,16 +110,16 @@ Existing research already shows that BC and textile fibres can be combined. My f
       {
         id: "graphic-design-amma",
         title: "Graphic Design",
-        summary: "Artistic direction and social media visuals for AMMA, my school's MMA and combat sports association.",
+        summary: "<strong class=\"highlight-green\">Artistic direction</strong> and <strong class=\"highlight-green\">social media visuals</strong> for AMMA, my school's MMA and combat sports association.",
         role: "Respo Communication (Bureau Member)",
         context: `AMMA — MMA & Combat Sports Association 
         Personal Projects`,
         tools: ["Art Direction", "Social Media", "Instagram", "Graphic Design"],
-        description: `As respo communication on the bureau of AMMA, my school's MMA and combat sports association, I am in charge of the association's artistic direction. I design the Instagram posts, stories, and other visuals that shape how the association presents itself and communicates with its community.
+        description: `As <strong class=\"highlight-green\">respo communication</strong> on the bureau of AMMA, my school's MMA and combat sports association, I am in charge of the association's <strong class=\"highlight-green\">artistic direction</strong>. I design the <strong class=\"highlight-green\">Instagram posts, stories, and other visuals</strong> that shape how the association presents itself and communicates with its community.
         
-        @amma_devinvi
+@amma_devinvi
         
-        I also have a deep interest in graphic design and make posters as a hobby.`,
+I also have a deep interest in <strong class=\"highlight-green\">graphic design</strong> and make posters as a hobby.`,
         images: [{ src: "images/ama1.png",},
           { src: "images/ama2.jpeg",},
            { src: "images/ama3.jpeg",}
@@ -144,16 +128,15 @@ Existing research already shows that BC and textile fibres can be combined. My f
       {
         id: "novalife",
         title: "Order Management Web Site",
-        summary: "A web site built to manage the orders of the research institute IFT ",
+        summary: "A web site built to <strong class=\"highlight-green\">manage the orders</strong> of the <strong class=\"highlight-green\">research institute IFT</strong>",
         role: "UI/UX Designer & Developer",
         context: "ESILV — Web Tech Course",
         tools: ["Firebase", "Vue.js", "GitHub"],
-        description: `I developped an order management web site for a research institute using Firebase (Backend-as-a-Service) as a database to store orders, and to handle user login/authentication, and Vue for the frontend.
+        description: `I developed an <strong class=\"highlight-green\">order management web site</strong> for a research institute using <strong class=\"highlight-green\">Firebase (Backend-as-a-Service)</strong> as a database to store orders, and to handle user login/authentication, and <strong class=\"highlight-green\">Vue for the frontend</strong>.
         
-        Check it out: https://candelacsaez.github.io/lab-order-system/login`,
+Check it out: <a href="https://candelacsaez.github.io/lab-order-system/login" target="_blank" rel="noopener noreferrer">https://candelacsaez.github.io/lab-order-system/login</a>`,
         images: [
           { src: "images/site1.png", alt: "NovaLife app logo and branding — Reconnect. Belong. Thrive" },
-          
         ],
       },
     ],
@@ -165,11 +148,11 @@ Existing research already shows that BC and textile fibres can be combined. My f
       {
         id: "dreamlogue",
         title: "DreamLogue",
-        summary: "An interactive project blending prompt engineering, AI image generation, and custom display interfaces.",
+        summary: "An interactive project blending <strong class=\"highlight-green\">prompt engineering</strong>, <strong class=\"highlight-green\">AI image generation</strong>, and <strong class=\"highlight-green\">custom display interfaces</strong>.",
         role: "Creative Technologist",
         context: "ESILV — HCI Course",
         tools: [ "Image Generation", "Human-Computer Interaction", "UI/UX"],
-        description: `DreamLogue is an interactive project aiming at enhancing users' introspection by creating an immersive experience where they can remember their dreams. It is a journal where you can keep track of your all your dreams and find patterns or repressed emotions.`,
+        description: `DreamLogue is an <strong class=\"highlight-green\">interactive project</strong> aiming at enhancing users' introspection by creating an <strong class=\"highlight-green\">immersive experience</strong> where they can remember their dreams. It is a journal where you can <strong class=\"highlight-green\">keep track of all your dreams</strong> and find patterns or repressed emotions.`,
         images: [{ type: "video", src: "images/dreamlog1.mp4"},
           { src: "images/dreamlog2.jpeg"},
           { src: "images/dreamlog3.jpeg"},
@@ -179,28 +162,27 @@ Existing research already shows that BC and textile fibres can be combined. My f
       {
         id: "unity-haptics",
         title: "A Trip Through Emotions",
-        summary: "A Unity environment with two contrasted worlds exploring how environmental design guides emotional experience.",
+        summary: "A <strong class=\"highlight-green\">Unity environment</strong> with two contrasted worlds exploring how <strong class=\"highlight-green\">environmental design</strong> guides <strong class=\"highlight-green\">emotional experience</strong>.",
         role: "Environment Designer & Developer",
         context: "ESILV — HCI Course",
         tools: ["Unity", "Haptics", "Electronics"],
-        description: `A Unity environment with two contrasted worlds connected by a hidden portal. The first world is a hostile desert that creates an anxious ambiance and a feeling of being trapped. On the other side of the portal, there is a calm forest with a relaxed landscape that connects you to nature and a feeling of freedom. Each world has different music that matches the mood. The project explores how environmental design can be used to guide emotional experience, reflecting a personal appreciation for nature. 
+        description: `A <strong class=\"highlight-green\">Unity environment</strong> with two contrasted worlds connected by a hidden portal. The first world is a hostile desert that creates an anxious ambiance and a feeling of being trapped. On the other side of the portal, there is a calm forest with a relaxed landscape that connects you to nature and a feeling of freedom. Each world has different music that matches the mood. The project explores how <strong class=\"highlight-green\">environmental design</strong> can be used to <strong class=\"highlight-green\">guide emotional experience</strong>, reflecting a personal appreciation for nature. 
         
-        In the context of a class about haptics, I created a vibrating device that activates when you get close to this invisible portal.`,
+In the context of a class about haptics, I created a <strong class=\"highlight-green\">vibrating device</strong> that activates when you get close to this invisible portal.`,
         images: [
           { src: "images/hci-unity-forest.png", alt: "Unity forest environment — calm landscape with pine trees, water, and blue sky" },
           { src: "images/hci-unity-desert.png", alt: "Unity desert environment — harsh sand dunes with sandstorm and orange sky" },
           { type: "video", src: "images/unity.mp4" }
         ],
-        
       },
       {
         id: "video-editing-electronics",
         title: "Video Editing with Electronics",
-        summary: "Electronics to real-time video editing and playback.",
+        summary: "<strong class=\"highlight-green\">Electronics</strong> to <strong class=\"highlight-green\">real-time video editing</strong> and playback.",
         role: "Interactive Media Designer",
         context: "ESILV — How to Make Almost Anything Course",
         tools: ["Electronics", "Video Processing", "Interactive Media"],
-        description: `In the context of the class HOW TO MAKE ALMOST ANYTHING, we created a PCB allowing us to glitch, edit, and play with videos and images. With potenciometers, we changed the colors of an image, we made our own pixeled animations and played with videos from an SD card.`,
+        description: `In the context of the class HOW TO MAKE ALMOST ANYTHING, we created a <strong class=\"highlight-green\">PCB</strong> allowing us to <strong class=\"highlight-green\">glitch, edit, and play</strong> with videos and images. With <strong class=\"highlight-green\">potentiometers</strong>, we changed the colors of an image, we made our own <strong class=\"highlight-green\">pixeled animations</strong> and played with videos from an SD card.`,
         images: [  { src: "images/elec1.jpg"},
           { src: "images/elec2.jpg"},
           { src: "images/elec3.jpg"},
